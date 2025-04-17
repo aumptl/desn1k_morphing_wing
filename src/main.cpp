@@ -47,8 +47,11 @@ void loop(){
         analogWrite(LEDS[i], (sin(millis()*n+phase_shift)+1.f)*127.5f);
     }
 
-    Serial.print("Servo 1: ");Serial.print(adjusted_val_1-adjusted_val_2);
-    Serial.print(" Servo 2: ");Serial.println(180-adjusted_val_1-adjusted_val_2);
+    Serial.print("Servo 1: ");
+    Serial.print(adjusted_val_1-adjusted_val_2);
+    Serial.print(", Servo 2: ");
+    Serial.println(180-adjusted_val_1-adjusted_val_2);
     
-    delay(15)
+    // TODO(Aum): Test if we need this delay or not!
+    delay(15);
 }
